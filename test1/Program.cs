@@ -1,4 +1,6 @@
-﻿Console.WriteLine("Введите первое число");
+﻿//Это ЗАДАЧА №2
+
+Console.WriteLine("Введите первое число");
 string? a = Console.ReadLine();
 Console.WriteLine("Введите второе число");
 string? b = Console.ReadLine();
