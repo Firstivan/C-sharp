@@ -2,7 +2,7 @@
 //показывает вторую цифру этого числа.
 // 456 -> 5
 
-Console.WriteLine("Put a number from three numbers");
+Console.WriteLine("Put a number from three numbers (from 100 to 999)");
 string? a = Console.ReadLine();
 
 int aa = Convert.ToInt32(a);
