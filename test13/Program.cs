@@ -3,7 +3,7 @@
 // 78 -> третьей цифры нет
 // 32679 -> 6
 
-Console.WriteLine("Введите число не менее трёхзначного (от 100 до 999)");
+Console.WriteLine("Введите произвольное число");
 String? a = Console.ReadLine();
 
 int number = Convert.ToInt32(a);
