@@ -13,7 +13,7 @@ int Promt(string message)
 
 int GetThirdRank(int number)
 {
-    while (number < 999)
+    while (number > 999)
     {
         number /= 10;
     }
@@ -30,8 +30,8 @@ bool ValidateNumber(int number)
     return true;
 }
 
-int number = Promt("Введите число");
+int number = Prompt("Введите число");
 if (ValidateNumber(number))
 {
-    Console.Write(GerThirdRank(number));
+    Console.WriteLine(GetThirdRank(number));
 }
