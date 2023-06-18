@@ -3,7 +3,7 @@
 // 78 -> третьей цифры нет
 // 32679 -> 6
 
-int Promt(string message)
+int Prompt(string message)
 {
     Console.Write(message);
     string value = Console.ReadLine();
@@ -30,7 +30,7 @@ bool ValidateNumber(int number)
     return true;
 }
 
-int number = Prompt("Введите число");
+int number = Prompt("Введите число - ");
 if (ValidateNumber(number))
 {
     Console.WriteLine(GetThirdRank(number));
