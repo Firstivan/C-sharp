@@ -3,3 +3,13 @@
 // 14212 -> нет
 // 12821 -> да
 // 23432 -> да
+
+Console.WriteLine("Введите 5-ти значное число: ");
+String? a = Console.ReadLine();
+int number = Convert.ToInt32(a);
+
+if ((number / 10000 % 10) == (number % 10) && (number /1000 % 10) == (number / 10 % 10))
+{
+    Console.Write("Отлично! Введенное число является палиндромом!");
+}
+Console.Write("введенное число не является палиндромом!");
