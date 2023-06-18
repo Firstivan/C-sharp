@@ -8,6 +8,5 @@ int a = Convert.ToInt32(aa);
 
 for (int i = 1; i <= a; i++)
 {
-    //  Console.Write(Math.Pow(i, 3));
-    Console.WriteLine("Таблица кубов чисел от 1 до " + aa + " при " +i+ ": " + (Math.Pow(i, 3)));
+    Console.WriteLine("Таблица кубов чисел от 1 до " + aa + ", при " +i+ ": " + (Math.Pow(i, 3)));
 }
