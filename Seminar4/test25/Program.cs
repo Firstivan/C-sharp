@@ -2,21 +2,46 @@
 //Задача 25: Напишите функцию, которая принимает на вход два числа (A и B) 
 //и возводит число A в натуральную степень B. НЕ ИСПОЛЬЗОВАТЬ MATH.POW()
 
-int ReadInt()                                       //Обозначаем метод для ввода числа
-{
-Console.WriteLine("Введите целое число!");          //Выводим на экран
-int value = Convert.ToInt32(Console.ReadLine());    //Конвертирупм введённую с троку в число
-return value;                                       // потому что не void (возвращаем метод)
-}
+using System;
 
-int Chisla (int A, int B)          //Задали функцию которая принимает два числа
+class Program
 {
-    int number = A;
-    for(int i = 1; i < B; i++)
+    static int ReadInt()
     {
-        number *= A;               // number = number * A
+        Console.WriteLine("Введите целое число!");
+        int value = Convert.ToInt32(Console.ReadLine());
+        return value;
     }
-    return number;                 // потому что не void
+
+    static int Power(int A, int B)
+    {
+        int result = 1;
+        for (int i = 0; i < B; i++)
+        {
+            result *= A;
+        }
+        return result;
+    }
+
+    static bool ValidateB(int B)
+    {
+        if (B < 0)
+        {
+            Console.WriteLine("Второе число не должно быть меньше нуля!");
+            return false;
+        }
+        return true;
+    }
+
+    static void Main(string[] args)
+    {
+        int A = ReadInt();
+        int B = ReadInt();
+        
+        if (ValidateB(B))
+        {
+            int result = Power(A, B);
+            Console.WriteLine(result);
+        }
+    }
 }
-int res = Chisla (ReadInt(), ReadInt());    //Вызываем метод. Два раза вводим числа (А и В)
-Console.WriteLine(res);
