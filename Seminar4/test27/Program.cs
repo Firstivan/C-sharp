@@ -14,10 +14,10 @@ int Prompt (string message)
 int SumAllDigit(int number)
 {
     int result = 0;
-    while (number > 0)
+    while (number != 0)
     {
-        result += number%10;
-        number = number /10;
+        result += number%10;        // Получаем последнюю цифру числа и Добавляем цифру к сумме
+        number = number /10;        // Удаляем последнюю цифру числа
     }
     return result;
 }

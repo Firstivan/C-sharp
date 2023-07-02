@@ -2,47 +2,38 @@
 //Задача 25: Напишите функцию, которая принимает на вход два числа (A и B) 
 //и возводит число A в натуральную степень B. НЕ ИСПОЛЬЗОВАТЬ MATH.POW()
 
-using System;
-
-class Program
+int Prompt (string message)
 {
-    static int ReadInt()
+    System.Console.WriteLine(message);
+    string readInput = System.Console.ReadLine();
+    int result = int.Parse(readInput);
+    return result;
+}
+
+int Power(int powerBase, int exponent)
+{
+    int Power = 1;
+    for (int i = 1; i < exponent; i++)
     {
-        Console.WriteLine("Введите целое число:");
-        int value = Convert.ToInt32(Console.ReadLine());
-        return value;
+    Power *= powerBase;
     }
-
-
-    static int Power(int A, int B)
+    return Power;
+}
+dotnet
+bool ValidateExponent(int exponent)
+{
+    if (exponent < 0)
     {
-        int result = 1;
-        for (int i = 1; i < B; i++)
-        {
-        result *= A;
-        }
-        return result;
+        Console.WriteLine("Второе число не должно быть мельше нуля!");
+        return false;
     }
+    return true;
+}
 
-    static bool ValidateB(int B)
-    {
-        if (B < 0)
-        {
-            Console.WriteLine("Второе число не должно быть мельше нуля!");
-            return false;
-        }
-        return true;
-    }
+int powerBase = Prompt("Введите целое число А");
+int exponent = Prompt("Введите целое число Б");
 
-    static void Main(string[] args)
-    {
-        int A = ReadInt();
-        int B = ReadInt();
-
-    if (ValidateB(B))
-        {
-            int result = Power(A, B);
-            Console.WriteLine(result);
-        }
-    }
+if (ValidateExponent(exponent))
+{
+    System.Console.WriteLine($"число {powerBase} в степени {exponent} равно {Power (powerBase, exponent)}");
 }
