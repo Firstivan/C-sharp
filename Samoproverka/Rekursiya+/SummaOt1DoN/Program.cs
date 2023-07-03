@@ -7,5 +7,11 @@ int SumFor(int n)
     return result;
 }
 
+int SumRec(int n)
+{
+    if (n == 0) return 0;
+    else return n + SumRec(n-1);
+}
 
-Console.WriteLine(result);
+Console.WriteLine(SumFor(11));
+Console.WriteLine(SumRec(10));
