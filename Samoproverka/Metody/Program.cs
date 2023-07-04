@@ -1,4 +1,6 @@
-﻿void Method1()
+﻿//Разные методы.
+
+void Method1()
 {
 Console.WriteLine("Метод 1 !");
 }
