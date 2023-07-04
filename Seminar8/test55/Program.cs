@@ -1,6 +1,6 @@
 ﻿// Задача 55: Задайте двумерный массив. Напишите программу, которая заменяет строки на столбцы. 
 
-int rows = 8; int columns = 3;
+int rows = 2; int columns = 3;
 
 int[,] GetRandomArray(int rows, int columns)
 {
