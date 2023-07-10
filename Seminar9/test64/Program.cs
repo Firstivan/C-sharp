@@ -3,13 +3,12 @@
 // N = 5 -> "5, 4, 3, 2, 1"
 // N = 8 -> "8, 7, 6, 5, 4, 3, 2, 1"
 
-int numberM = 1;
-int numberN = 4;
+int numberN = 10;
 
-int Perechislenie(int LastNumber, int FirstNumber)
+void Perechislenie(int numberN)
 {
-    if (1 <= LastNumber) return;
-    Perechislenie(FirstNumber + 1, LastNumber);
-    Console.Write(FirstNumber + "");
+    if (numberN <= 0) return;    //вызывается рекурсивно до тех пор, пока значение n не станет меньше или равно 0
+    Console.Write(numberN + " ");
+    Perechislenie(numberN - 1);
 }
-Perechislenie(numberM, numberN);
+Perechislenie(numberN);
