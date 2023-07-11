@@ -20,14 +20,14 @@ class Program
         {
             for (int j = 0; j < matrix.GetLength(1); j++)
             {
-                matrix[i, j] = random.Next(1, 10);
+                matrix[i, j] = random.Next( 1, 10);
             }
         }
 
-        return matrix;
+        return matrix ;
     }
 
-    static void PrintMatrix(int[,] matrix)
+    static void PrintMatrix(int[,] matrix )
     {
         for (int i = 0; i < matrix.GetLength(0); i++)
         {
@@ -65,13 +65,13 @@ class Program
 
         int[,] myMatrix = GetRandomMatrix(Rows, Columns);
 
-        Console.WriteLine("Исходный массив:");
+        Console.WriteLine("Исходный массив: ");
         PrintMatrix(myMatrix);
         Console.WriteLine();
 
         SortMatrixRowsDescending(myMatrix);
 
-        Console.WriteLine("Упорядоченный массив:");
+        Console.WriteLine("Упорядоченный массив: ");
         PrintMatrix(myMatrix);
     }
 }
