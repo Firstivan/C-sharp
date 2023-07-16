@@ -5,47 +5,32 @@
 // 11 16 15 06
 // 10 09 08 07
 
-int[,] GenerateArray()
+int[,] arr = new int[5, 5];
+
+void SpiralArray(int[,] trempArrayr)
 {
-    int rows = 4;
-    int columns = 4;
-    int[,] array = new int[rows, columns];
-    Random random = new Random();
-
-    for (int i = 0; i < rows; i++)
+    int num = 1;
+    int size = trempArrayr.GetLength(0);
+    for (int i = size - 1, j = 0; i > 0; i--, j++)
     {
-        for (int j = 0; j < columns; j++)
-        {
-            array[i, j] = random.Next(10, 100); // Генерация произвольного двузначного числа (10-99)
-        }
+        for (int n = j; n < i; n++) { trempArrayr[j, n] = num++; }
+        for (int n = j; n < i; n++) { trempArrayr[n, i] = num++; }
+        for (int n = i; n > j; n--) { trempArrayr[i, n] = num++; }
+        for (int n = i; n > j; n--) { trempArrayr[n, j] = num++; }
     }
-
-    return array;
 }
 
-void PrintArray(int[,] array)
+void PrintArray(int[,] trempArrayr)
 {
-    int rows = array.GetLength(0);
-    int columns = array.GetLength(1);
-    int numDigits = Math.Max(rows, columns).ToString().Length + 1;
-
-    for (int i = 0; i < rows; i++)
+    for (int i = 0; i < trempArrayr.GetLength(0); i++)
     {
-        for (int j = 0; j < columns; j++)
+        for (int n = 0; n < trempArrayr.GetLength(1); n++)
         {
-            Console.Write(array[i, j].ToString().PadLeft(numDigits, ' '));
+            Console.Write(trempArrayr[i, n] + "\t");
         }
         Console.WriteLine();
     }
 }
 
-int[,] originalArray = GenerateArray();
-
-Console.WriteLine("Исходный массив:");
-PrintArray(originalArray);
-Console.WriteLine();
-
-int[,] spiralMatrix = GetSpiral();
-
-Console.WriteLine("Спиральная матрица:");
-PrintArray(spiralMatrix);
+SpiralArray(arr);
+PrintArray(arr);
