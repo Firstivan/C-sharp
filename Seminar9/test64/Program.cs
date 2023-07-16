@@ -7,8 +7,9 @@ int numberN = 10;
 
 void Perechislenie(int numberN)
 {
-    if (numberN <= 0) return;    //вызывается рекурсивно до тех пор, пока значение n не станет меньше или равно 0
-    Console.Write(numberN + " ");
+    if (numberN <= 0) return;       //вызывается рекурсивно до тех пор, 
+                                    //пока значение n не станет меньше или равно 0
+    Console.Write(numberN+ "\t");
     Perechislenie(numberN - 1);
 }
 Perechislenie(numberN);
