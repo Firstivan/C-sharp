@@ -5,18 +5,18 @@
 // 11 16 15 06
 // 10 09 08 07
 
-int[,] arr = new int[5, 5];
+int[,] arr = new int[4, 4];
 
 void SpiralArray(int[,] trempArrayr)
 {
-    int num = 1;
+    int sum = 1;
     int size = trempArrayr.GetLength(0);
     for (int i = size - 1, j = 0; i > 0; i--, j++)
     {
-        for (int n = j; n < i; n++) { trempArrayr[j, n] = num++; }
-        for (int n = j; n < i; n++) { trempArrayr[n, i] = num++; }
-        for (int n = i; n > j; n--) { trempArrayr[i, n] = num++; }
-        for (int n = i; n > j; n--) { trempArrayr[n, j] = num++; }
+        for (int n = j; n < i; n++) { trempArrayr[j, n] = sum++; }
+        for (int n = j; n < i; n++) { trempArrayr[n, i] = sum++; }
+        for (int n = i; n > j; n--) { trempArrayr[i, n] = sum++; }
+        for (int n = i; n > j; n--) { trempArrayr[n, j] = sum++; }
     }
 }
 
