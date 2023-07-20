@@ -21,5 +21,5 @@ string arrayString = string.Join(", ", array);
 Console.WriteLine(arrayString);
 
 Console.WriteLine("Длина массива: " + array.Length);
-Console.WriteLine("Начальное значение: " + array[0]);
-Console.WriteLine("Конечное значение: " + array[array.Length - 1]);
+Console.WriteLine("Первое значение: " + array[0]);
+Console.WriteLine("Последнее значение: " + array[array.Length - 1]);
