@@ -72,9 +72,13 @@
 
 // проверка метода
 
-void ReadInt(String message)
+void ReadInt (String message)
 {
     Console.WriteLine(message);
+    Console.ReadLine();
+    return;
 }
-ReadInt(message: " Вызвали Метод 1."); //Вызывыем Метод 2
-ReadInt(message: " Вызвали Метод 2."); //Вызывыем Метод 2
+
+int n = (ReadInt(message: "Сообщение но не СМС"));
+
+ReadInt(message: "Сообщение но не MMC");

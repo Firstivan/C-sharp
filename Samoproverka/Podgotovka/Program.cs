@@ -38,26 +38,32 @@
 
 //Задача 27: Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
 
-// Console.WriteLine("Enter a any number");
-// int number = Convert.ToInt32(Console.ReadLine());
-// int sum = 0;
+Console.WriteLine("Enter a any number");
+int number = Convert.ToInt32(Console.ReadLine());
+int sum = 0;
 
-// while (number != 0)
-// {
-//     sum = sum + number % 10;
-//     number = number / 10;
-// }   
-// Console.WriteLine(sum);
+while (number != 0)             //  245 //
+{
+    sum = sum + number % 10;    //  5   //4 //2
+    number = number / 10;       //  24  //2 //0
+}   
+Console.WriteLine(sum);
 //________________________________
 
 // Задача №28. Произведение чисел от 1 до введенного числа
 
-Console.WriteLine("Enter a any number");
-int number = Convert.ToInt32(Console.ReadLine());
-int proizv = 1;
+// Console.WriteLine("Enter a any number");
+// int number = Convert.ToInt32(Console.ReadLine());
+// int proizv = 1;
 
-for (int i = 1; i <= number; i++)
-{
-    proizv *=i;
-}
-Console.WriteLine(proizv);
+// for (int i = 1; i <= number; i++)
+// {
+//     proizv *=i;
+// }
+// Console.WriteLine(proizv);
+// ____________________________________________________________________
+
+// int numberA = new Random().Next(1, 10);     // Случайные числа от 1 до 10
+// int numberB = Random.Shared.Next(11, 12);    // Случайные числа от 11 до 12
+// Console.WriteLine(+(numberA + numberB));
+//_______________________________________________________________

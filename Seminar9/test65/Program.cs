@@ -7,6 +7,6 @@ void Perechislenie(int LastNumber, int FirstNumber)
 {
     if (LastNumber <= FirstNumber -1) return;
     Perechislenie(LastNumber - 1, FirstNumber);
-    Console.Write(LastNumber + "");
+    Console.Write(LastNumber + " ");
 }
 Perechislenie(numberN, numberM);

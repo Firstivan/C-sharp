@@ -5,21 +5,21 @@
 int Prompt (string message)
 {
     System.Console.WriteLine(message);
-    string readInput = System.Console.ReadLine();
-    int result = int.Parse(readInput);
+    string readInput = System.Console.ReadLine(); //int result = Convert.ToInt32(System.Console.ReadLine());
+    int result = int.Parse(readInput);              // и тут тоже
     return result;
 }
 
 int Power(int powerBase, int exponent)
 {
     int Power = 1;
-    for (int i = 1; i < exponent; i++)
+    for (int i = 1; i <= exponent; i++)
     {
     Power *= powerBase;
     }
     return Power;
 }
-dotnet
+
 bool ValidateExponent(int exponent)
 {
     if (exponent < 0)

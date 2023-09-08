@@ -22,4 +22,4 @@ Console.WriteLine(arrayString);
 
 Console.WriteLine("Длина массива: " + array.Length);
 Console.WriteLine("Первое значение: " + array[0]);
-Console.WriteLine("Последнее значение: " + array[array.Length - 1]);
+Console.WriteLine("Конечное значение: " + array[array.Length - 1]);
